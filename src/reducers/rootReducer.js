@@ -3,5 +3,5 @@ import { counterReducer } from "./counterReducer";
 
 
 export const rootReducer = combineReducers({
-    count: counterReducer
+    frogs: counterReducer
 })

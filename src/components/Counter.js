@@ -1,25 +1,26 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { frogCounter } from '../actions/counterActions';
+import { connect } from 'react-redux';
 
-class Counter extends Component {
+const Counter = (props) => {
+    return (
+        <div className="counter">
+            <h1>FROGS: {props.frogs.frogs}</h1>
+            <button onClick={props.frogCounter}>🐸Catch🐸</button>
+        </div>
+    );
+};
 
-    state = {
-        count: 0
-    }
-
-    handleClick = () => {
-        this.setState({ count: this.state.count + 1 })
-    }
-
-    render() {
-        return (
-            <div>
-                <h1>Frogs: {this.state.count}</h1>
-                <button onClick={this.handleClick}>🐸Catch a frog🐸</button>
-            </div>
-        );
+const mapStateToProps = state => {
+    return {
+        frogs: state.frogs
     }
 }
 
+const mapDispatchToProps = dispatch => {
+    return {
+        frogCounter: () => dispatch(frogCounter())
+    }
+}
 
-
-export default Counter;
+export default connect(mapStateToProps, mapDispatchToProps)(Counter);

@@ -1,3 +1,5 @@
-export const incrementCounter = (counter) => {
-    (counter => dispatch({type: "INCREMENT", payload: counter}))
+export const frogCounter = () => {
+    return {
+        type: "INCREMENT"
+    }
 }
