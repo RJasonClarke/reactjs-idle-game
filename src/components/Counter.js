@@ -6,15 +6,20 @@ class Counter extends Component {
         count: 0
     }
 
+    handleClick = () => {
+        this.setState({ count: this.state.count + 1 })
+    }
+
     render() {
         return (
             <div>
-                <h1>Counter</h1>
-                <h1>{this.state.count}</h1>
-                <button>Click</button>
+                <h1>Frogs: {this.state.count}</h1>
+                <button onClick={this.handleClick}>🐸Catch a frog🐸</button>
             </div>
         );
     }
 }
+
+
 
 export default Counter;
