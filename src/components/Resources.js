@@ -2,10 +2,10 @@ import React from 'react';
 import { frogCounter } from '../actions/counterActions';
 import { connect } from 'react-redux';
 
-const Counter = (props) => {
+const Resources = (props) => {
     return (
-        <div className="catch-button">
-            <button onClick={props.frogCounter}>🐸Catch🐸</button>
+        <div>
+            <h1 className="resources">FROGS: {props.frogs.frogs}</h1>
         </div>
     );
 };
@@ -22,4 +22,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+export default connect(mapStateToProps, mapDispatchToProps)(Resources);

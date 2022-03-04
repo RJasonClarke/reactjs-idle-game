@@ -9,6 +9,11 @@ export const counterReducer = (state = initialState, action) => {
                 ...state,
                 frogs: state.frogs + 1
             }
+        case "GNATS_UPGRADE":
+            return {
+                ...state,
+                frogs: state.frogs + 2
+            }
         default:
             return state
     }

@@ -2,6 +2,10 @@
     font-family: 'Courier New', Courier, monospace
   }
 
-.counter {
+.catch-button {
+  text-align: center;
+}
+
+.resources {
   text-align: center;
 }
